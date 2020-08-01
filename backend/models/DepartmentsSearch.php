@@ -65,6 +65,7 @@ class DepartmentsSearch extends Departments
         ]);
 
         $query->andFilterWhere(['like', 'department_name', $this->department_name])
+            ->andFilterWhere(['like', 'companies_company_id', $this->companies_company_id])
             ->andFilterWhere(['like', 'department_status', $this->department_status]);
 
         return $dataProvider;
